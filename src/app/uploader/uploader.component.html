@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="{{ uploaderTheme }}">
+        <label 
+            for="uploader" 
+            class="uploader-label">
+            {{ uploaderText }}
+        </label>
+        <input type="file" id="uploader" (change)="getFile($event)" hidden>
+    </div>
+    <div class="{{ uploaderTheme }}" (click)="unsetFile()">
+        <img class="remove-image" src="../../assets/resources/close.png">
+    </div>
+</div>
+<div>
+    <label class="message-label">
+        {{ messageLabel }}
+    </label>
+</div>

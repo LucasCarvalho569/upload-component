@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  file: File;
+
+  formats: string[] = ['application/pdf', 'text/plain'];
+
+  public pegarArquivo(file: File) {
+    this.file = file;
+    console.log(this.file);
+  }
+
+  public removerArquivo() {
+    this.file = null;
+  }
 }
